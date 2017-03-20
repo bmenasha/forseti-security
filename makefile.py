@@ -102,7 +102,8 @@ def MakeProto():
               # Standard include paths.
               # We just bring google/proto/descriptor.proto with us to make it
               # easier to install.
-              "--proto_path=.",
+              "--proto_path=include",
+              "--proto_path=google",
               os.path.relpath(proto, cwd)
           ],
           cwd=cwd)
